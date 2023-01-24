@@ -14,29 +14,37 @@ What did you need to do to provision a vm to:
 ## General Environment Questions
 
 - What are development environments?
+  A development environment is for developers to change things without affecting the live environment which is facing the end user.
+
 - How do they relate to an application?
+  If an application is customer facing, modifying the application on the live environment would be problematic. Using the development environment allows you to see the changes you've made without affecting users.
 
 ### Virtual machines
 
 - What is a virtual machine?
+  A virtual computer that uses software to emulate another PC without using a physical PC.
 - What does it allow you to do?
+  Virtual machines can be used for many things, such as trying out a new OS or running programs that are incompatible with your physical PC.
 - How have you used one?
+  We ran servers using apache
 
 ### Vagrant
 
 - What is vagrant?
+  Vagrant is a tool for building and managing virtual machines.
 - What is a `VagrantFile`?
+  A file in the Ruby programming language that provides vagrant for instructions to create or destroy new vagrant machines.
 
 #### CLI commands
 
-| Command   | What does it do? | When did you use it? |
-| --------- | ---------------- | -------------------- |
-| reload    |                  |                      |
-| up        |                  |                      |
-| provision |                  |                      |
-| destroy   |                  |                      |
-| suspend   |                  |                      |
-| ssh       |                  |                      |
+| Command   | What does it do?                                                                                      | When did you use it?                                   |
+| --------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| reload    | Effectively running a halt then running up, used for modifying the vagrant files.                     | If the vagrantfile is modified, reload should be used. |
+| up        | This command creates and configures a virtual machine according to your vagrant file                  | To start up my VMs                                     |
+| provision | Runs                                                                                                  |                                                        |
+| destroy   | Stops a vagrant machine that's running and destroys any resources created during the machine creation | To completely restart your virtual machine             |
+| suspend   | Suspends the machine, effectively putting it to sleep                                                 |                                                        |
+| ssh       | Lets you connect to your virtual machine.                                                             | Modified config files for apache                       |
 
 #### Provisioning
 
