@@ -13,8 +13,8 @@ curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 echo ------------------ Install node ----------------
 sudo apt-get install -y nodejs -y
 
-#echo ------------------ Install npm -----------------
-#sudo apt-get install npm -y
+echo ------------------ Install npm -----------------
+sudo apt-get install npm -y
 
 echo ------------- Installing Apache ----------------
 sudo apt install apache2 -y
@@ -45,5 +45,5 @@ cd ../vagrant/app
 echo -------------- Install Dependancies ------------
 npm install
 
-# echo -------------------- Run App -------------------
-# node script.js
+echo -------------------- Run App -------------------
+node script.js
