@@ -1,12 +1,20 @@
 # Provisioning project
 
 What did you need to do to provision a vm to run mongo db?
+Set up vagrant on a host machine, create a Vagrantfile and used a script.sh to automatically install MongoDB. Used an image .iso of ubuntu to run a linux VM.
 
 What did you need to do to provision a vm to:
 
 - Run the node.js application?
+  Run the app via
+
 - Use the `nology.training` alias?
+  Add some options of ServerName and ServerAlias to the nology-proxy.conf
+
 - Use apache server to dirent traffic to a given port?
+
+Installed Apache server and copied the nology-proxy into the config file in apache2/sites-available
+
 - How are you able to pass in the DB connection string?
 
 ---
@@ -31,9 +39,9 @@ What did you need to do to provision a vm to:
 ### Vagrant
 
 - What is vagrant?
-  Vagrant is a tool for building and managing virtual machines.
+  Vagrant is an open-source tool for building and managing virtual machines.
 - What is a `VagrantFile`?
-  A file in the Ruby programming language that provides vagrant for instructions to create or destroy new vagrant machines.
+  A file in the Ruby programming language that provides vagrant with instructions to create or destroy new vagrant machines.
 
 #### CLI commands
 
@@ -49,5 +57,6 @@ What did you need to do to provision a vm to:
 #### Provisioning
 
 - What is Provisioning in relation to Vagrant?
+  Provisioning allows you to automatically install software, change configurations, and modify other options during the vagrant up process.
 
 ---
