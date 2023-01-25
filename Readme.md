@@ -6,7 +6,7 @@ Set up vagrant on a host machine, create a Vagrantfile and used a script.sh to a
 What did you need to do to provision a vm to:
 
 - Run the node.js application?
-  Run the app via
+  Run the app via node /script.js at the end of the script.sh
 
 - Use the `nology.training` alias?
   Add some options of ServerName and ServerAlias to the nology-proxy.conf
@@ -34,7 +34,7 @@ Installed Apache server and copied the nology-proxy into the config file in apac
 - What does it allow you to do?
   Virtual machines can be used for many things, such as trying out a new OS or running programs that are incompatible with your physical PC.
 - How have you used one?
-  We ran servers using apache
+  We ran servers using apache.
 
 ### Vagrant
 
@@ -45,14 +45,14 @@ Installed Apache server and copied the nology-proxy into the config file in apac
 
 #### CLI commands
 
-| Command   | What does it do?                                                                                      | When did you use it?                                   |
-| --------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
-| reload    | Effectively running a halt then running up, used for modifying the vagrant files.                     | If the vagrantfile is modified, reload should be used. |
-| up        | This command creates and configures a virtual machine according to your vagrant file                  | To start up my VMs                                     |
-| provision | Runs                                                                                                  |                                                        |
-| destroy   | Stops a vagrant machine that's running and destroys any resources created during the machine creation | To completely restart your virtual machine             |
-| suspend   | Suspends the machine, effectively putting it to sleep                                                 |                                                        |
-| ssh       | Lets you connect to your virtual machine.                                                             | Modified config files for apache                       |
+| Command   | What does it do?                                                                                                  | When did you use it?                                                                  |
+| --------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| reload    | Effectively running a halt then running up, used for modifying the vagrant files and reloading the configureation | If the vagrantfile is modified, reload should be used.                                |
+| up        | This command creates and configures a virtual machine according to your vagrant file                              | To start up my VMs                                                                    |
+| provision | Runs the shell command scripts from the script.sh                                                                 | Used after vagrant machine has been initialised or the shell scripts have been edited |
+| destroy   | Stops a vagrant machine that's running and destroys any resources created during the machine creation             | To completely restart your virtual machine                                            |
+| suspend   | Suspends the machine, effectively putting it to sleep                                                             | When you need to work on the VM but don't need it running in the background           |
+| ssh       | Lets you connect to your virtual machine.                                                                         | We used it to modify config files for apache - so used for files specific to the VM   |
 
 #### Provisioning
 
