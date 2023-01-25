@@ -1,7 +1,7 @@
 # Provisioning project
 
 What did you need to do to provision a vm to run mongo db?
-Set up vagrant on a host machine, create a Vagrantfile and used a script.sh to automatically install MongoDB. Used an image .iso of ubuntu to run a linux VM.
+Set up vagrant on a host machine, create a Vagrantfile and write a script.sh to automatically install MongoDB. Used an image .iso of ubuntu to run a linux VM.
 
 What did you need to do to provision a vm to:
 
@@ -11,21 +11,21 @@ What did you need to do to provision a vm to:
 - Use the `nology.training` alias?
   Add some options of ServerName and ServerAlias to the nology-proxy.conf
 
-- Use apache server to dirent traffic to a given port?
-
-Installed Apache server and copied the nology-proxy into the config file in apache2/sites-available
+- Use apache server to direct traffic to a given port?
+Installed Apache server and copied the nology-proxy.conf into the config file in apache2/sites-available.
 
 - How are you able to pass in the DB connection string?
+Using the mongod.conf file.
 
 ---
 
 ## General Environment Questions
 
 - What are development environments?
-  A development environment is for developers to change things without affecting the live environment which is facing the end user.
+  A development environment is for developers to change things, run tests, etc. without affecting the live environment which is facing the end user.
 
 - How do they relate to an application?
-  If an application is customer facing, modifying the application on the live environment would be problematic. Using the development environment allows you to see the changes you've made without affecting users.
+  If an application is customer facing, modifying the application on the live environment would cause errors on their end. Using the development environment allows you to see the changes you've made without affecting users.
 
 ### Virtual machines
 
